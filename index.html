@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Nomad Tutor App – Sample POC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app">
+    <!-- TOP BAR -->
+     <header class="top-bar">
+  <div class="bar-inner">
+    <div class="top-left">
+      <!-- your existing brand + dropdown content stays here -->
+      <div class="brand">
+        <img src="nomad-logo.png" alt="Nomad logo" class="logo-img" />
+        <span class="brand-name">Nomad Tutor Apps</span>
+      </div>
+
+      <div class="screen-selector">
+        <label for="screenSelect" class="sr-only">Go to:</label>
+        <div class="select-wrapper">
+          <select id="screenSelect">
+            <option value="screen-landing">Landing & Preview</option>
+            <option value="screen-teach">Teach Step (Sample)</option>
+            <option value="screen-test">Test (Sample)</option>
+            <option value="screen-revision">Revision</option>
+            <option value="screen-promo">Nomad Promo</option>
+          </select>
+          <span class="select-chevron">▾</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="top-center">
+      <div class="chapter-title">
+        Class 8 Maths – Chapter 1: Rational Numbers
+      </div>
+    </div>
+
+    <div class="top-right">
+      <button id="parentReportBtn" class="btn-outline">
+        Parent Report
+      </button>
+    </div>
+  </div>
+</header>
+
+    <!-- MAIN CONTENT AREA -->
+    <main class="main-content">
+      <!-- SCREEN: Landing & Preview -->
+      <section id="screen-landing" class="screen">
+        <div class="section-block">
+          <h1>Rational Numbers </h1>
+          <p class="muted">
+            A small chapter app to help your child practise Rational Numbers
+            while you get a clear view of what is done and what needs support.
+          </p>
+        </div>
+
+        <div class="section-block">
+          <h2>How this app helps you</h2>
+          <ul class="bullet-list">
+            <li>Child learns via short “Teach + Practice” steps.</li>
+            <li>You can see progress and weak areas anytime in Parent Report.</li>
+            <li>No promises of marks; this is a practice and monitoring tool.</li>
+          </ul>
+        </div>
+
+        <div class="section-block card">
+          <h2>Free preview – sample concept</h2>
+          <h3>Concept: Rational numbers on the number line</h3>
+          <p>
+            A rational number is any number that can be written in the form
+            <span class="highlight">p/q</span>, where p and q are integers and
+            q ≠ 0. We can show rational numbers on a number line like points.
+          </p>
+
+          <div class="board">
+            <div class="board-title">Board – Solved examples</div>
+            <ol class="board-list">
+              <li>Plot 1/2 on the number line.</li>
+              <li>Plot −3/4 on the number line.</li>
+              <li>Plot 5/2 on the number line.</li>
+            </ol>
+          </div>
+
+          <div class="section-block">
+            <h3>Try 3 quick questions</h3>
+
+            <div class="question">
+              <p>Q1. 1/2 is between:</p>
+              <label><input type="radio" name="preview_q1" value="a" /> 0 and 1</label>
+              <label><input type="radio" name="preview_q1" value="b" /> 1 and 2</label>
+              <label><input type="radio" name="preview_q1" value="c" /> −1 and 0</label>
+            </div>
+
+            <div class="question">
+              <p>Q2. −3/4 lies between:</p>
+              <label><input type="radio" name="preview_q2" value="a" /> −1 and 0</label>
+              <label><input type="radio" name="preview_q2" value="b" /> 0 and 1</label>
+              <label><input type="radio" name="preview_q2" value="c" /> 1 and 2</label>
+            </div>
+
+            <div class="question">
+              <p>Q3. Write 5/2 as a mixed number:</p>
+              <input type="text" id="preview_q3" placeholder="Your answer" />
+              <button id="previewCheckBtn" class="btn-small">Check</button>
+              <div id="previewFeedback" class="feedback"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-block paywall card">
+          <h2>Unlock full chapter</h2>
+          <ul class="bullet-list">
+            <li>All concept explanations in simple board-style notes.</li>
+            <li>Teach steps with worked examples and practice after each step.</li>
+            <li>Three tests – Easy, Hard, Advanced.</li>
+            <li>Revision suggestions based on mistakes.</li>
+            <li>Parent report with strong/weak areas and next steps.</li>
+          </ul>
+
+          <p class="price-line">
+            Launch price: <span class="price">₹49</span> for first 50 buyers
+            (₹99 standard).
+          </p>
+
+          <button id="payBtn" class="btn-primary">
+            Pay ₹49 to unlock full chapter
+          </button>
+
+          <p class="tiny-text">
+            Nomad is a practice and monitoring tool. We do not guarantee any
+            exam results or performance. App availability is not guaranteed and
+            may be interrupted or stopped.
+            <a href="#" id="openTerms">View full Terms &amp; Conditions</a>
+          </p>
+        </div>
+      </section>
+
+      <!-- SCREEN: Teach Step (Sample) -->
+      <section id="screen-teach" class="screen hidden">
+        <div class="section-block">
+          <h2>Teach Step 1 / 9 – Rational numbers and fractions</h2>
+          <p>
+            In this sample Teach step, we treat rational numbers as fractions
+            p/q and practise identifying numerator, denominator and sign.
+          </p>
+        </div>
+
+        <div class="board">
+          <div class="board-title">Board – Explanation & examples</div>
+          <ul class="board-list">
+            <li>Any fraction like 3/5 is a rational number.</li>
+            <li>−2/7 is also a rational number (negative sign in numerator).</li>
+            <li>0 can be written as 0/1, 0/5, etc. (q ≠ 0).</li>
+          </ul>
+        </div>
+
+        <div class="section-block">
+          <h3>Practice – 5 questions</h3>
+
+          <div class="question" data-qid="teach_q1">
+            <p>Q1. In 3/5, 3 is the:</p>
+            <label><input type="radio" name="teach_q1" value="num" /> Numerator</label>
+            <label><input type="radio" name="teach_q1" value="den" /> Denominator</label>
+          </div>
+
+          <div class="question" data-qid="teach_q2">
+            <p>Q2. In −2/7, the negative sign belongs to:</p>
+            <label><input type="radio" name="teach_q2" value="num" /> Numerator</label>
+            <label><input type="radio" name="teach_q2" value="den" /> Denominator</label>
+          </div>
+
+          <div class="question" data-qid="teach_q3">
+            <p>Q3. Is 0/5 a rational number?</p>
+            <label><input type="radio" name="teach_q3" value="yes" /> Yes</label>
+            <label><input type="radio" name="teach_q3" value="no" /> No</label>
+          </div>
+
+          <div class="question" data-qid="teach_q4">
+            <p>Q4. Write 4/7 as a rational number p/q: (just type p/q)</p>
+            <input type="text" id="teach_q4" placeholder="e.g., 4/7" />
+          </div>
+
+          <div class="question" data-qid="teach_q5">
+            <p>Q5. Write −5/9 as a rational number p/q:</p>
+            <input type="text" id="teach_q5" placeholder="e.g., -5/9" />
+          </div>
+
+          <button id="teachCheckBtn" class="btn-primary">Check answers</button>
+          <div id="teachFeedback" class="feedback"></div>
+        </div>
+      </section>
+
+      <!-- SCREEN: Test (Sample) -->
+      <section id="screen-test" class="screen hidden">
+        <div class="section-block">
+          <h2>Test – Sample (Easy)</h2>
+          <p class="muted">
+            5 questions: 3 MCQs + 2 answer-only, just to show the test format.
+          </p>
+        </div>
+
+        <div class="section-block">
+          <div class="question" data-qid="test_q1">
+            <p>Q1. 2/3 is a:</p>
+            <label><input type="radio" name="test_q1" value="int" /> Integer</label>
+            <label><input type="radio" name="test_q1" value="rat" /> Rational number</label>
+            <label><input type="radio" name="test_q1" value="irr" /> Irrational number</label>
+          </div>
+
+          <div class="question" data-qid="test_q2">
+            <p>Q2. −7/4 is:</p>
+            <label><input type="radio" name="test_q2" value="pos" /> Positive</label>
+            <label><input type="radio" name="test_q2" value="neg" /> Negative</label>
+          </div>
+
+          <div class="question" data-qid="test_q3">
+            <p>Q3. 0 is a rational number.</p>
+            <label><input type="radio" name="test_q3" value="true" /> True</label>
+            <label><input type="radio" name="test_q3" value="false" /> False</label>
+          </div>
+
+          <div class="question" data-qid="test_q4">
+            <p>Q4. Simplify 4/8 to lowest terms:</p>
+            <input type="text" id="test_q4" placeholder="e.g., 1/2" />
+          </div>
+
+          <div class="question" data-qid="test_q5">
+            <p>Q5. Write −9/3 as an integer:</p>
+            <input type="text" id="test_q5" placeholder="e.g., -3" />
+          </div>
+
+          <button id="testSubmitBtn" class="btn-primary">Submit test</button>
+          <div id="testFeedback" class="feedback"></div>
+        </div>
+      </section>
+
+      <!-- SCREEN: Revision (Sample) -->
+      <section id="screen-revision" class="screen hidden">
+        <div class="section-block">
+          <h2>Revision suggestions</h2>
+          <p class="muted">
+            This screen shows simple suggestions based on which sample questions
+            or test items were wrong.
+          </p>
+        </div>
+
+        <div id="revisionContent" class="section-block card">
+          <p>
+            Take the sample Teach step and Test. Your revision suggestions will
+            appear here.
+          </p>
+        </div>
+      </section>
+
+      <!-- SCREEN: Parent Report (live) -->
+      <section id="screen-parent-report" class="screen hidden">
+        <div class="section-block">
+          <h2>Parent Report – Sample</h2>
+          <p class="muted">
+            This report updates as your child works through Teach steps and
+            tests in this sample POC.
+          </p>
+        </div>
+
+        <div class="section-block card">
+          <h3>Overall summary</h3>
+          <p id="reportTeachStatus">Teach steps completed: 0 / 1 (sample)</p>
+          <p id="reportTestStatus">Tests completed: 0 / 1 (sample)</p>
+        </div>
+
+        <div class="section-block card">
+          <h3>Performance</h3>
+          <p id="reportLastTestScore">Latest sample test score: –</p>
+        </div>
+
+        <div class="section-block card">
+          <h3>Strong areas</h3>
+          <ul id="reportStrongList" class="bullet-list">
+            <li>No data yet. Ask your child to try the Teach step and sample test.</li>
+          </ul>
+        </div>
+
+        <div class="section-block card">
+          <h3>Weak areas</h3>
+          <ul id="reportWeakList" class="bullet-list">
+            <li>No data yet.</li>
+          </ul>
+        </div>
+
+        <div class="section-block card">
+          <h3>Next steps for your child</h3>
+          <p id="reportNextSteps">
+            Once your child attempts the Teach practice and sample test, we will
+            suggest 1–2 simple next steps here.
+          </p>
+        </div>
+
+        <p class="tiny-text">
+          Nomad is a practice and monitoring tool. We do not guarantee any exam
+          results. App availability is not guaranteed and may be interrupted or
+          stopped.
+        </p>
+      </section>
+
+      <!-- SCREEN: Nomad Promo -->
+      <section id="screen-promo" class="screen hidden">
+        <div class="section-block">
+          <h2>About Nomad Tutor Apps</h2>
+          <p>
+            Nomad Tutor Apps are small chapter-wise study helpers designed for
+            mothers and children to track learning in a simple way.
+          </p>
+        </div>
+
+        <div class="section-block card">
+          <h3>This sample app</h3>
+          <p>
+            This sample covers only one Teach step and one test format to show
+            how a full chapter app will look and feel.
+          </p>
+        </div>
+
+        <div class="section-block card">
+          <h3>Coming soon</h3>
+          <p>
+            More chapter-wise apps for other chapters, subjects and standards
+            are planned. We will decide based on feedback from this chapter.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- BOTTOM NAV -->
+    <footer class="bottom-bar">
+  <div class="bar-inner bottom-inner">
+    <button id="prevBtn" class="btn-secondary">◀ Previous</button>
+    <button id="nextBtn" class="btn-primary">Next ▶</button>
+  </div>
+</footer>
+
+  <!-- SIMPLE MODAL FOR PAY CONFIRM / TERMS -->
+  <div id="modalOverlay" class="modal-overlay">
+    <div class="modal">
+      <h3 id="modalTitle">Title</h3>
+      <p id="modalBody">Body text</p>
+      <button id="modalCloseBtn" class="btn-primary">OK</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
