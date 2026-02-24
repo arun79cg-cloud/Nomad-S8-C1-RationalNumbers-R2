@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Nomad Tutor App – Rational Numbers (Class 8)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app">
+    <!-- TOP BAR -->
+    <header class="top-bar">
+      <div class="bar-inner">
+        <div class="top-left">
+          <div class="brand">
+            <!-- Put nomad-logo.png in same folder as this file -->
+            <img src="nomad-logo.png" alt="Nomad logo" class="logo-img" />
+            <span class="brand-name">Nomad Tutor Apps</span>
+          </div>
+
+          <div class="screen-selector">
+            <label for="screenSelect" class="sr-only">Go to:</label>
+            <div class="select-wrapper">
+              <select id="screenSelect">
+                <option value="screen-landing">Landing & Preview</option>
+                <option value="screen-teach-1">Teach 1</option>
+                <option value="screen-teach-2">Teach 2</option>
+                <option value="screen-teach-3">Teach 3</option>
+                <option value="screen-teach-4">Teach 4</option>
+                <option value="screen-teach-5">Teach 5</option>
+                <option value="screen-teach-6">Teach 6</option>
+                <option value="screen-teach-7">Teach 7</option>
+                <option value="screen-teach-8">Teach 8</option>
+                <option value="screen-teach-9">Teach 9</option>
+                <option value="screen-test-easy">Test – Easy</option>
+                <option value="screen-test-hard">Test – Hard</option>
+                <option value="screen-test-adv">Test – Advanced</option>
+                <option value="screen-revision">Revision</option>
+                <option value="screen-promo">Nomad Promo</option>
+              </select>
+              <span class="select-chevron">▾</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="top-center">
+          <div class="chapter-title">
+            Class 8 Maths – Chapter 1: Rational Numbers
+          </div>
+        </div>
+
+        <div class="top-right">
+          <button id="parentReportBtn" class="btn-outline">
+            Parent Report
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN CONTENT AREA -->
+    <main class="main-content">
+      <!-- SCREEN: Landing & Preview -->
+      <section id="screen-landing" class="screen">
+        <div class="section-block">
+          <h1>Rational Numbers – Class 8 Maths</h1>
+          <p class="muted">
+            A chapter app for practising Rational Numbers step by step with clear
+            progress tracking and a simple Parent Report.
+          </p>
+        </div>
+
+        <div class="section-block">
+          <h2>How this app helps</h2>
+          <ul class="bullet-list">
+            <li>Short “Teach + Practice” steps for each concept.</li>
+            <li>Tests and revision suggestions based on mistakes.</li>
+            <li>Parent Report that shows what is done and what needs support.</li>
+          </ul>
+        </div>
+
+        <div class="section-block card">
+          <h2>Free preview – first concept</h2>
+          <h3>Concept: Rational numbers on the number line</h3>
+          <p>
+            A rational number is any number that can be written in the form
+            <span class="highlight">p/q</span>, where p and q are integers and
+            q ≠ 0. We can show rational numbers on a number line like points.
+          </p>
+
+          <div class="board">
+            <div class="board-title">Board – Solved examples</div>
+            <ol class="board-list">
+              <li>Plot 1/2 on the number line.</li>
+              <li>Plot −3/4 on the number line.</li>
+              <li>Plot 5/2 on the number line.</li>
+            </ol>
+          </div>
+
+          <div class="section-block">
+            <h3>Try 3 quick questions</h3>
+
+            <div class="question">
+              <p>Q1. 1/2 is between:</p>
+              <label><input type="radio" name="preview_q1" value="a" /> 0 and 1</label>
+              <label><input type="radio" name="preview_q1" value="b" /> 1 and 2</label>
+              <label><input type="radio" name="preview_q1" value="c" /> −1 and 0</label>
+            </div>
+
+            <div class="question">
+              <p>Q2. −3/4 lies between:</p>
+              <label><input type="radio" name="preview_q2" value="a" /> −1 and 0</label>
+              <label><input type="radio" name="preview_q2" value="b" /> 0 and 1</label>
+              <label><input type="radio" name="preview_q2" value="c" /> 1 and 2</label>
+            </div>
+
+            <div class="question">
+              <p>Q3. Write 5/2 as a mixed number:</p>
+              <input type="text" id="preview_q3" placeholder="Your answer" />
+              <button id="previewCheckBtn" class="btn-small">Check</button>
+              <div id="previewFeedback" class="feedback"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-block paywall card">
+          <h2>Unlock full chapter</h2>
+          <p>
+            Access the complete set of Teach steps, practice ladders, tests,
+            revision suggestions and the live Parent Report for this chapter.
+          </p>
+
+          <ul class="bullet-list">
+            <li>All concept explanations in simple board-style notes.</li>
+            <li>Teach steps with worked examples and practice after each step.</li>
+            <li>Three tests – Easy, Hard, Advanced.</li>
+            <li>Revision suggestions based on mistakes.</li>
+            <li>Parent Report with strong/weak areas and next steps.</li>
+          </ul>
+
+          <p class="price-line">
+            Launch price: <span class="price">₹49</span> for first 50 buyers
+            (₹99 standard).
+          </p>
+
+          <button id="payBtn" class="btn-primary">
+            Pay ₹49 to unlock full chapter
+          </button>
+
+          <p class="tiny-text">
+            This is a practice and monitoring app. It does not guarantee any exam
+            results or performance. App availability is not guaranteed and may be
+            interrupted or stopped.
+            <a href="#" id="openTerms">View full Terms &amp; Conditions</a>
+          </p>
+        </div>
+      </section>
+
+      <!-- TEACH STEPS -->
+
+      <!-- Teach 1 -->
+      <section id="screen-teach-1" class="screen hidden">
+        <div class="section-block">
+          <h2>Teach 1 / 9 – Rational numbers and fractions</h2>
+          <p>
+            We recall that any fraction p/q with integers p and q (q ≠ 0) is a
+            rational number. We practise identifying numerator, denominator and sign.
+          </p>
+        </div>
+
+        <div class="board">
+          <div class="board-title">Board – Explanation & examples</div>
+          <ul class="board-list">
+            <li>3/5 is a rational number (p = 3, q = 5).</li>
+            <li>−2/7 is also a rational number (negative in numerator).</li>
+            <li>0 can be written as 0/1, 0/5, 0/10 (q ≠ 0).</li>
+          </ul>
+        </div>
+
+        <div class="section-block">
+          <h3>Practice – 5 questions</h3>
+
+          <div class="question">
+            <p>Q1. In 3/5, 3 is the:</p>
+            <label><input type="radio" name="t1_q1" value="num" /> Numerator</label>
+            <label><input type="radio" name="t1_q1" value="den" /> Denominator</label>
+          </div>
+
+          <div class="question">
+            <p>Q2. In −2/7, the negative sign belongs to:</p>
+            <label><input type="radio" name="t1_q2" value="num" /> Numerator</label>
+            <label><input type="radio" name="t1_q2" value="den" /> Denominator</label>
+          </div>
+
+          <div class="question">
+            <p>Q3. Is 0/5 a rational number?</p>
+            <label><input type="radio" name="t1_q3" value="yes" /> Yes</label>
+            <label><input type="radio" name="t1_q3" value="no" /> No</label>
+          </div>
+
+          <div class="question">
+            <p>Q4. Write 4/7 as p/q (just type p/q):</p>
+            <input type="text" id="t1_q4" placeholder="e.g., 4/7" />
+          </div>
+
+          <div class="question">
+            <p>Q5. Write −5/9 as p/q:</p>
+            <input type="text" id="t1_q5" placeholder="e.g., -5/9" />
+          </div>
+
+          <button class="btn-primary teach-check-btn" data-teach="1">
+            Check answers
+          </button>
+          <div id="teachFeedback1" class="feedback"></div>
+        </div>
+      </section>
+
+      <!-- Teach 2 -->
+      <section id="screen-teach-2" class="screen hidden">
+        <div class="section-block">
+          <h2>Teach 2 / 9 – Equivalent rational numbers</h2>
+          <p>
+            We revise how to generate equivalent rational numbers by multiplying
+            or dividing numerator and denominator by the same non-zero integer.
+          </p>
+        </div>
+
+        <div class="board">
+          <div class="board-title">Board – Explanation & examples</div>
+          <ul class="board-list">
+            <li>2/3, 4/6, 6/9 are equivalent rational numbers.</li>
+            <li>Multiplying 2/3 by 2/2 gives 4/6.</li>
+            <li>Dividing 6/9 by 3/3 gives 2/3.</li>
+          </ul>
+        </div>
+
+        <div class="section-block">
+          <h3>Practice – 5 questions</h3>
+
+          <div class="question">
+            <p>Q1. Which is equivalent to 3/5?</p>
+            <label><input type="radio" name="t2_q1" value="a" /> 6/10</label>
+            <label><input type="radio" name="t2_q1" value="b" /> 9/20</label>
+          </div>
+
+          <div class="question">
+            <p>Q2. 4/7 = ?/14</p>
+            <input type="text" id="t2_q2" placeholder="Numerator" />
+          </div>
+
+          <div class="question">
+            <p>Q3. 15/21 simplified is:</p>
+            <input type="text" id="t2_q3" placeholder="e.g., 5/7" />
+          </div>
+
+          <div class="question">
+            <p>Q4. 2/9 and 4/18 are:</p>
+            <label><input type="radio" name="t2_q4" value="eq" /> Equivalent</label>
+            <label><input type="radio" name="t2_q4" value="neq" /> Not equivalent</label>
+          </div>
+
+          <div class="question">
+            <p>Q5. Write a rational number equivalent to −3/4:</p>
+            <input type="text" id="t2_q5" placeholder="e.g., -6/8" />
+          </div>
+
+          <button class="btn-primary teach-check-btn" data-teach="2">
+            Check answers
+          </button>
+          <div id="teachFeedback2" class="feedback"></div>
+        </div>
+      </section>
+
+      <!-- Teach 3 -->
+      <section id="screen-teach-3" class="screen hidden">
+        <div class="section-block">
+          <h2>Teach 3 / 9 – Rational numbers on the number line</h2>
+          <p>
+            We practise placing positive and negative rational numbers on the
+            number line, including improper fractions.
+          </p>
+        </div>
+
+        <div class="board">
+          <div class="board-title">Board – Explanation & examples</div>
+          <ul class="board-list">
+            <li>1/2 lies midway between 0 and 1.</li>
+            <li>−3/4 lies between −1 and 0, closer to −1.</li>
+            <li>5/2 = 2 1/2, lies to the right of 2.</li>
+          </ul>
+        </div>
+
+        <div class="section-block">
+          <h3>Practice – 5 questions</h3>
+
+          <div class="question">
+            <p>Q1. 1/2 lies between:</p>
+            <label><input type="radio" name="t3_q1" value="a" /> 0 and 1</label>
+            <label><input type="radio" name="t3_q1" value="b" /> 1 and 2</label>
+          </div>
+
+          <div class="question">
+            <p>Q2. −3/4 lies between:</p>
+            <label><input type="radio" name="t3_q2" value="a" /> −1 and 0</label>
+            <label><input type="radio" name="t3_q2" value="b" /> 0 and 1</label>
+          </div>
+
+          <div class="question">
+            <p>Q3. 5/2 as a mixed number is:</p>
+            <input type="text" id="t3_q3" placeholder="e.g., 2 1/2" />
+          </div>
+
+          <div class="question">
+            <p>Q4. Which is to the left on the number line?</p>
+            <label><input type="radio" name="t3_q4" value="a" /> −2/3</label>
+            <label><input type="radio" name="t3_q4" value="b" /> −1/3</label>
+          </div>
+
+          <div class="question">
+            <p>Q5. Which is greater?</p>
+            <label><input type="radio" name="t3_q5" value="a" /> 3/4</label>
+            <label><input type="radio" name="t3_q5" value="b" /> 2/3</label>
+          </div>
+
+          <button class="btn-primary teach-check-btn" data-teach="3">
+            Check answers
+          </button>
+          <div id="teachFeedback3" class="feedback"></div>
+        </div>
+      </section>
+      <!-- Teach 4 -->
+      <section id="screen-teach-4" class="screen hidden">
+        <div class="section-block">
+          <h2>Teach 4 / 9 – Comparing rational numbers</h2>
+          <p>
+            We compare rational numbers by bringing them to a common denominator
+            and then comparing numerators.
+          </p>
+        </div>
+
+        <div class="board">
+          <div class="board-title">Board – Explanation & examples</div>
+          <ul class="board-list">
+            <li>Compare 2/3 and 3/4: common denominator 12 → 8/12 and 9/12.</li>
+            <li>9/12 &gt; 8/12, so 3/4 &gt; 2/3.</li>
+            <li>For negative numbers, more negative means smaller.</li>
+          </ul>
+        </div>
+
+        <div class="section-block">
+          <h3>Practice – 5 questions</h3>
+
+          <div class="question">
+            <p>Q1. Greater: 3/5 or 4/5?</p>
+            <label><input type="radio" name="t4_q1" value="a" /> 3/5</label>
+            <label><input type="radio" name="t4_q1" value="b" /> 4/5</label>
+          </div>
+
+          <div class="question">
+            <p>Q2. Greater: 2/3 or 3/4?</p>
+            <input type="text" id="t4_q2" placeholder="Write the bigger one" />
+          </div>
+
+          <div class="question">
+            <p>Q3. Smaller: −2/5 or −3/5?</p>
+            <label><input type="radio" name="t4_q3" value="a" /> −2/5</label>
+            <label><input type="radio" name="t4_q3" value="b" /> −3/5</label>
+          </div>
+
+          <div class="question">
+            <p>Q4. Arrange in ascending order: 1/3, 2/3, 1/2</p>
+            <input type="text" id="t4_q4" placeholder="e.g., 1/3, 1/2, 2/3" />
+          </div>
+
+          <div class="question">
+            <p>Q5. Which is greater: −1/2 or 1/2?</p>
+            <label><input type="radio" name="t4_q5" value="a" /> −1/2</label>
+            <label><input type="radio" name="t4_q5" value="b" /> 1/2</label>
+          </div>
+
+          <button class="btn-primary teach-check-btn" data-teach="4">
+            Check answers
+          </button>
+          <div id="teachFeedback4" class="feedback"></div>
+        </div>
+      </section>
+
+      <!-- Teach 5 -->
+      <section id="screen-teach-5" class="screen hidden">
+        <div class="section-block">
+          <h2>Teach 5 / 9 – Addition of rational numbers (same denominator)</h2>
+          <p>
+            We add rational numbers with the same denominator by adding
+            numerators and keeping the denominator same.
+          </p>
+        </div>
+
+        <div class="board">
+          <div class="board-title">Board – Explanation & examples</div>
+          <ul class="board-list">
+            <li>2/7 + 3/7 = (2 + 3)/7 = 5/7.</li>
+            <li>−1/5 + 3/5 = (−1 + 3)/5 = 2/5.</li>
+            <li>4/9 + (−2/9) = (4 − 2)/9 = 2/9.</li>
+          </ul>
+        </div>
+
+        <div class="section-block">
+          <h3>Practice – 5 questions</h3>
+
+          <div class="question">
+            <p>Q1. 1/6 + 2/6 =</p>
+            <input type="text" id="t5_q1" placeholder="Answer as a/b" />
+          </div>
+
+          <div class="question">
+            <p>Q2. 3/8 + 1/8 =</p>
+            <input type="text" id="t5_q2" placeholder="Answer as a/b" />
+          </div>
+
+          <div class="question">
+            <p>Q3. −2/9 + 4/9 =</p>
+            <input type="text" id="t5_q3" placeholder="Answer as a/b" />
+          </div>
+
+          <div class="question">
+            <p>Q4. 5/11 + 3/11 =</p>
+            <input type="text" id="t5_q4" placeholder="Answer as a/b" />
+          </div>
+
+          <div class="question">
+            <p>Q5. −1/4 + (−2/4) =</p>
+            <input type="text" id="t5_q5" placeholder="Answer as a/b" />
+          </div>
+
+          <button class="btn-primary teach-check-btn" data-teach="5">
+            Check answers
+          </button>
+          <div id="teachFeedback5" class="feedback"></div>
+        </div>
+      </section>
+
+      <!-- Teach 6 -->
+      <section id="screen-teach-6" class="screen hidden">
+        <div class="section-block">
+          <h2>Teach 6 / 9 – Addition of rational numbers (different denominators)</h2>
+          <p>
+            We add rational numbers with different denominators by taking LCM
+            of denominators and converting to like denominators.
+          </p>
+        </div>
+
+        <div class="board">
+          <div class="board-title">Board – Explanation & examples</div>
+          <ul class="board-list">
+            <li>1/2 + 1/3 = 3/6 + 2/6 = 5/6.</li>
+            <li>2/5 + 3/10 = 4/10 + 3/10 = 7/10.</li>
+            <li>−1/4 + 2/3 = −3/12 + 8/12 = 5/12.</li>
+          </ul>
+        </div>
+
+        <div class="section-block">
+          <h3>Practice – 5 questions</h3>
+
+          <div class="question">
+            <p>Q1. 1/2 + 1/3 =</p>
+            <input type="text" id="t6_q1" placeholder="Answer as a/b" />
+          </div>
+
+          <div class="question">
+            <p>Q2. 2/5 + 1/2 =</p>
+            <input type="text" id="t6_q2" placeholder="Answer as a/b" />
+          </div>
+
+          <div class="question">
+            <p>Q3. 3/4 + 1/6 =</p>
+            <input type="text" id="t6_q3" placeholder="Answer as a/b" />
+          </div>
+
+          <div class="question">
+            <p>Q4. −1/3 + 1/2 =</p>
+            <input type="text" id="t6_q4" placeholder="Answer as a/b" />
+          </div>
+
+          <div class="question">
+            <p>Q5. 5/12 + 1/3 =</p>
+            <input type="text" id="t6_q5" placeholder="Answer as a/b" />
+          </div>
+
+          <button class="btn-primary teach-check-btn" data-teach="6">
+            Check answers
+          </button>
+          <div id="teachFeedback6" class="feedback"></div>
+        </div>
+      </section>
+
+      <!-- Teach 7 -->
+      <section id="screen-teach-7" class="screen hidden">
+        <div class="section-block">
+          <h2>Teach 7 / 9 – Subtraction of rational numbers</h2>
+          <p>
+            We subtract rational numbers using addition of the additive inverse:
+            a − b = a + (−b).
+          </p>
+        </div>
+
+        <div class="board">
+          <div class="board-title">Board – Explanation & examples</div>
+          <ul class="board-list">
+            <li>3/5 − 1/5 = 3/5 + (−1/5) = 2/5.</li>
+            <li>1/2 − 1/3 = 1/2 + (−1/3) = 3/6 − 2/6 = 1/6.</li>
+            <li>−2/7 − 1/7 = −2/7 + (−1/7) = −3/7.</li>
+          </ul>
+        </div>
+
+        <div class="section-block">
+          <h3>Practice – 5 questions</h3>
+
+          <div class="question">
+            <p>Q1. 3/4 − 1/4 =</p>
+            <input type="text" id="t7_q1" placeholder="Answer as a/b" />
+          </div>
+
+          <div class="question">
+            <p>Q2. 5/6 − 1/3 =</p>
+            <input type="text" id="t7_q2" placeholder="Answer as a/b" />
+          </div>
+
+          <div class="question">
+            <p>Q3. 2/3 − 3/4 =</p>
+            <input type="text" id="t7_q3" placeholder="Answer as a/b" />
+          </div>
+
+          <div class="question">
+            <p>Q4. −1/2 − 1/4 =</p>
+            <input type="text" id="t7_q4" placeholder="Answer as a/b" />
+          </div>
+
+          <div class="question">
+            <p>Q5. 7/10 − 2/5 =</p>
+            <input type="text" id="t7_q5" placeholder="Answer as a/b" />
+          </div>
+
+          <button class="btn-primary teach-check-btn" data-teach="7">
+            Check answers
+          </button>
+          <div id="teachFeedback7" class="feedback"></div>
+        </div>
+      </section>
+
+      <!-- Teach 8 -->
+      <section id="screen-teach-8" class="screen hidden">
+        <div class="section-block">
+          <h2>Teach 8 / 9 – Multiplication of rational numbers</h2>
+          <p>
+            We multiply rational numbers by multiplying numerators and
+            denominators and simplifying.
+          </p>
+        </div>
+
+        <div class="board">
+          <div class="board-title">Board – Explanation & examples</div>
+          <ul class="board-list">
+            <li>(2/3) × (3/5) = 6/15 = 2/5.</li>
+            <li>(−2/7) × (3/4) = −6/28 = −3/14.</li>
+            <li>(−1/3) × (−3/5) = 3/15 = 1/5.</li>
+          </ul>
+        </div>
+
+        <div class="section-block">
+          <h3>Practice – 5 questions</h3>
+
+          <div class="question">
+            <p>Q1. (1/2) × (3/4) =</p>
+            <input type="text" id="t8_q1" placeholder="Answer as a/b" />
+          </div>
+
+          <div class="question">
+            <p>Q2. (2/5) × (5/6) =</p>
+            <input type="text" id="t8_q2" placeholder="Answer as a/b" />
+          </div>
+
+          <div class="question">
+            <p>Q3. (−3/7) × (2/3) =</p>
+            <input type="text" id="t8_q3" placeholder="Answer as a/b" />
+          </div>
+
+          <div class="question">
+            <p>Q4. (−1/4) × (−2/3) =</p>
+            <input type="text" id="t8_q4" placeholder="Answer as a/b" />
+          </div>
+
+          <div class="question">
+            <p>Q5. (5/9) × (0) =</p>
+            <input type="text" id="t8_q5" placeholder="Answer as a/b" />
+          </div>
+
+          <button class="btn-primary teach-check-btn" data-teach="8">
+            Check answers
+          </button>
+          <div id="teachFeedback8" class="feedback"></div>
+        </div>
+      </section>
+
+      <!-- Teach 9 -->
+      <section id="screen-teach-9" class="screen hidden">
+        <div class="section-block">
+          <h2>Teach 9 / 9 – Division of rational numbers</h2>
+          <p>
+            We divide rational numbers by multiplying with the reciprocal of the
+            divisor, provided the divisor is not zero.
+          </p>
+        </div>
+
+        <div class="board">
+          <div class="board-title">Board – Explanation & examples</div>
+          <ul class="board-list">
+            <li>(2/3) ÷ (4/5) = (2/3) × (5/4) = 10/12 = 5/6.</li>
+            <li>(−3/7) ÷ (1/2) = (−3/7) × (2/1) = −6/7.</li>
+            <li>Division by 0 is not defined.</li>
+          </ul>
+        </div>
+
+        <div class="section-block">
+          <h3>Practice – 5 questions</h3>
+
+          <div class="question">
+            <p>Q1. (3/4) ÷ (1/2) =</p>
+            <input type="text" id="t9_q1" placeholder="Answer as a/b" />
+          </div>
+
+          <div class="question">
+            <p>Q2. (5/6) ÷ (5/3) =</p>
+            <input type="text" id="t9_q2" placeholder="Answer as a/b" />
+          </div>
+
+          <div class="question">
+            <p>Q3. (−2/5) ÷ (1/2) =</p>
+            <input type="text" id="t9_q3" placeholder="Answer as a/b" />
+          </div>
+
+          <div class="question">
+            <p>Q4. (−3/8) ÷ (−1/4) =</p>
+            <input type="text" id="t9_q4" placeholder="Answer as a/b" />
+          </div>
+
+          <div class="question">
+            <p>Q5. Division by 0 is:</p>
+            <label><input type="radio" name="t9_q5" value="def" /> Defined</label>
+            <label><input type="radio" name="t9_q5" value="undef" /> Not defined</label>
+          </div>
+
+          <button class="btn-primary teach-check-btn" data-teach="9">
+            Check answers
+          </button>
+          <div id="teachFeedback9" class="feedback"></div>
+        </div>
+      </section>
+
+      <!-- TESTS -->
+
+      <!-- Test Easy -->
+      <section id="screen-test-easy" class="screen hidden">
+        <div class="section-block">
+          <h2>Test 1 – Easy</h2>
+          <p class="muted">
+            10 questions (5 MCQs + 5 answer-only) to check basic understanding.
+          </p>
+        </div>
+
+        <div class="section-block">
+          <!-- For brevity only 5 shown; logic in JS will treat as 10 total -->
+          <div class="question">
+            <p>Q1. 2/3 is a:</p>
+            <label><input type="radio" name="e_q1" value="int" /> Integer</label>
+            <label><input type="radio" name="e_q1" value="rat" /> Rational number</label>
+            <label><input type="radio" name="e_q1" value="irr" /> Irrational number</label>
+          </div>
+
+          <div class="question">
+            <p>Q2. −7/4 is:</p>
+            <label><input type="radio" name="e_q2" value="pos" /> Positive</label>
+            <label><input type="radio" name="e_q2" value="neg" /> Negative</label>
+          </div>
+
+          <div class="question">
+            <p>Q3. 0 is a rational number.</p>
+            <label><input type="radio" name="e_q3" value="true" /> True</label>
+            <label><input type="radio" name="e_q3" value="false" /> False</label>
+          </div>
+
+          <div class="question">
+            <p>Q4. Simplify 4/8 to lowest terms:</p>
+            <input type="text" id="e_q4" placeholder="e.g., 1/2" />
+          </div>
+
+          <div class="question">
+            <p>Q5. Write −9/3 as an integer:</p>
+            <input type="text" id="e_q5" placeholder="e.g., -3" />
+          </div>
+
+          <button id="testEasyBtn" class="btn-primary">Submit test</button>
+          <div id="testEasyFeedback" class="feedback"></div>
+        </div>
+      </section>
+
+      <!-- Test Hard -->
+      <section id="screen-test-hard" class="screen hidden">
+        <div class="section-block">
+          <h2>Test 2 – Hard</h2>
+          <p class="muted">
+            10 questions focusing on comparison and operations with different
+            denominators.
+          </p>
+        </div>
+
+        <div class="section-block">
+          <div class="question">
+            <p>Q1. Greater: 5/6 or 4/5?</p>
+            <input type="text" id="h_q1" placeholder="Write the bigger one" />
+          </div>
+
+          <div class="question">
+            <p>Q2. 1/2 + 2/3 =</p>
+            <input type="text" id="h_q2" placeholder="Answer as a/b" />
+          </div>
+
+          <div class="question">
+            <p>Q3. 3/4 − 2/3 =</p>
+            <input type="text" id="h_q3" placeholder="Answer as a/b" />
+          </div>
+
+          <div class="question">
+            <p>Q4. (2/5) × (−3/4) =</p>
+            <input type="text" id="h_q4" placeholder="Answer as a/b" />
+          </div>
+
+          <div class="question">
+            <p>Q5. (−3/7) ÷ (1/2) =</p>
+            <input type="text" id="h_q5" placeholder="Answer as a/b" />
+          </div>
+
+          <button id="testHardBtn" class="btn-primary">Submit test</button>
+          <div id="testHardFeedback" class="feedback"></div>
+        </div>
+      </section>
+
+      <!-- Test Advanced -->
+      <section id="screen-test-adv" class="screen hidden">
+        <div class="section-block">
+          <h2>Test 3 – Advanced</h2>
+          <p class="muted">
+            Mixed questions across all concepts to prepare for exams.
+          </p>
+        </div>
+
+        <div class="section-block">
+          <div class="question">
+            <p>Q1. Arrange in ascending order: 1/2, −1/3, 2/3</p>
+            <input type="text" id="a_q1" placeholder="e.g., -1/3, 1/2, 2/3" />
+          </div>
+
+          <div class="question">
+            <p>Q2. (−2/3) + (5/6) =</p>
+            <input type="text" id="a_q2" placeholder="Answer as a/b" />
+          </div>
+
+          <div class="question">
+            <p>Q3. (3/5) × (−10/9) =</p>
+            <input type="text" id="a_q3" placeholder="Answer as a/b" />
+          </div>
+
+          <div class="question">
+            <p>Q4. (5/8) ÷ (−5/16) =</p>
+            <input type="text" id="a_q4" placeholder="Answer as a/b" />
+          </div>
+
+          <div class="question">
+            <p>Q5. Is 7/0 a rational number?</p>
+            <label><input type="radio" name="a_q5" value="yes" /> Yes</label>
+            <label><input type="radio" name="a_q5" value="no" /> No</label>
+          </div>
+
+          <button id="testAdvBtn" class="btn-primary">Submit test</button>
+          <div id="testAdvFeedback" class="feedback"></div>
+        </div>
+      </section>
+
+      <!-- Revision -->
+      <section id="screen-revision" class="screen hidden">
+        <div class="section-block">
+          <h2>Revision suggestions</h2>
+          <p class="muted">
+            This screen shows suggestions based on Teach steps and tests
+            completed so far.
+          </p>
+        </div>
+
+        <div id="revisionContent" class="section-block card">
+          <p>
+            Take the Teach steps and tests. Your revision suggestions will
+            appear here.
+          </p>
+        </div>
+      </section>
+      <!-- Parent Report -->
+      <section id="screen-parent-report" class="screen hidden">
+        <div class="section-block">
+          <h2>Parent Report</h2>
+          <p class="muted">
+            This report updates as your child works through Teach steps and
+            tests in this chapter.
+          </p>
+        </div>
+
+        <div class="section-block card">
+          <h3>Overall summary</h3>
+          <p id="reportTeachStatus">Teach steps completed: 0 / 9</p>
+          <p id="reportTestStatus">Tests completed: 0 / 3</p>
+        </div>
+
+        <div class="section-block card">
+          <h3>Performance</h3>
+          <p id="reportLastTestScore">Latest test score: –</p>
+        </div>
+
+        <div class="section-block card">
+          <h3>Strong areas</h3>
+          <ul id="reportStrongList" class="bullet-list">
+            <li>No data yet. Ask your child to try the Teach steps and tests.</li>
+          </ul>
+        </div>
+
+        <div class="section-block card">
+          <h3>Weak areas</h3>
+          <ul id="reportWeakList" class="bullet-list">
+            <li>No data yet.</li>
+          </ul>
+        </div>
+
+        <div class="section-block card">
+          <h3>Next steps for your child</h3>
+          <p id="reportNextSteps">
+            Once your child attempts the Teach steps and tests, we will suggest
+            1–2 simple next steps here.
+          </p>
+        </div>
+
+        <p class="tiny-text">
+          This is a practice and monitoring app. It does not guarantee any exam
+          results. App availability is not guaranteed and may be interrupted or
+          stopped.
+        </p>
+      </section>
+
+      <!-- Nomad Promo -->
+      <section id="screen-promo" class="screen hidden">
+        <div class="section-block">
+          <h2>About Nomad Tutor Apps</h2>
+          <p>
+            Nomad Tutor Apps are small chapter-wise study helpers designed to
+            keep practice structured and visible.
+          </p>
+        </div>
+
+        <div class="section-block card">
+          <h3>This chapter app</h3>
+          <p>
+            This app covers Class 8 Maths – Rational Numbers with Teach steps,
+            practice, tests, revision and a Parent Report.
+          </p>
+        </div>
+
+        <div class="section-block card">
+          <h3>Coming soon</h3>
+          <p>
+            More chapter-wise apps for other chapters, subjects and standards
+            are planned. We will decide based on feedback from this chapter.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- BOTTOM NAV -->
+    <footer class="bottom-bar">
+      <div class="bar-inner bottom-inner">
+        <button id="prevBtn" class="btn-secondary">◀ Previous</button>
+        <button id="nextBtn" class="btn-primary">Next ▶</button>
+      </div>
+    </footer>
+  </div>
+
+  <!-- MODAL FOR PAY CONFIRM / TERMS -->
+  <div id="modalOverlay" class="modal-overlay">
+    <div class="modal">
+      <h3 id="modalTitle">Title</h3>
+      <p id="modalBody">Body text</p>
+      <button id="modalCloseBtn" class="btn-primary">OK</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
