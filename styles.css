@@ -1,0 +1,412 @@
+/* Base reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: #f7f0e6; /* earthy cream */
+  color: #18363a; /* deep teal-ish text */
+}
+
+/* Layout */
+#app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top and bottom bars (full-width background) */
+.top-bar {
+  width: 100%;
+  padding: 0.6rem 0;            /* no side padding here */
+  background-color: #16363b;    /* deep teal */
+  color: #f7f0e6;
+}
+
+.bottom-bar {
+  width: 100%;
+  padding: 0.5rem 0;
+  border-top: 1px solid #decfb8;
+  background-color: #f3e6d4;
+}
+
+/* Inner container so contents align with main content width */
+.bar-inner {
+  max-width: 880px;     /* same as .main-content */
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+
+.bottom-inner {
+  padding: 0 1rem;
+}
+
+/* Top bar sections */
+.top-left,
+.top-center,
+.top-right {
+  display: flex;
+  align-items: center;
+}
+
+/* Brand */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-right: 0.75rem;
+}
+
+.logo-img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.brand-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* Dropdown selector */
+.screen-selector {
+  position: relative;
+  font-size: 0.85rem;
+}
+
+.select-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  background-color: #f7f0e6;
+  color: #18363a;
+  border-radius: 999px;
+  padding: 0 0.75rem;
+}
+
+.select-wrapper select {
+  border: none;
+  background: transparent;
+  padding: 0.25rem 1.5rem 0.25rem 0;
+  font-size: 0.8rem;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  color: #18363a;
+  outline: none;
+}
+
+.select-chevron {
+  position: absolute;
+  right: 0.4rem;
+  font-size: 0.7rem;
+  pointer-events: none;
+}
+
+/* Chapter title */
+.top-center {
+  flex: 1;
+  justify-content: center;
+  text-align: center;
+}
+
+.chapter-title {
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* Parent report button area */
+.top-right {
+  justify-content: flex-end;
+}
+
+/* Main content */
+.main-content {
+  flex: 1;
+  padding: 1rem;
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+/* Sections */
+.section-block {
+  margin-bottom: 1rem;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0 0 0.4rem 0;
+}
+
+h1 {
+  font-size: 1.4rem;
+}
+
+h2 {
+  font-size: 1.1rem;
+}
+
+h3 {
+  font-size: 0.95rem;
+}
+
+p {
+  margin: 0.25rem 0;
+}
+
+.muted {
+  color: #6a706c;
+  font-size: 0.9rem;
+}
+
+/* Card-like blocks */
+.card {
+  background-color: #fffaf3;
+  border-radius: 8px;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid #e1d5c3;
+}
+
+/* Board style */
+.board {
+  margin: 0.75rem 0;
+  background-color: #103036;
+  color: #f7f0e6;
+  border-radius: 8px;
+  padding: 0.6rem 0.8rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.18);
+}
+
+.board-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.board-list {
+  margin: 0;
+  padding-left: 1.1rem;
+  font-size: 0.9rem;
+}
+
+/* Lists */
+.bullet-list {
+  margin: 0.25rem 0 0.25rem 1rem;
+  padding: 0;
+  font-size: 0.9rem;
+}
+
+.bullet-list li {
+  margin-bottom: 0.2rem;
+}
+
+/* Questions */
+.question {
+  margin-bottom: 0.7rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px dashed #dcccb5;
+}
+
+.question p {
+  margin-bottom: 0.2rem;
+}
+
+.question label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 0.1rem;
+}
+
+/* Inputs */
+input[type="text"] {
+  padding: 0.4rem 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #c2b39d;
+  width: 100%;
+  max-width: 220px;
+  font-size: 0.9rem;
+}
+
+/* Buttons */
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background-color: #c4552f; /* terracotta */
+  color: #f7f0e6;
+  border-radius: 999px;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1px solid #a64222;
+}
+
+.btn-primary:hover {
+  background-color: #ac4a29;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #16363b;
+  border-radius: 999px;
+  padding: 0.35rem 0.85rem;
+  border: 1px solid #9ca8a2;
+  font-size: 0.85rem;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(22, 54, 59, 0.06);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: #f7f0e6;
+  border-radius: 999px;
+  border: 1px solid #f7f0e6;
+  padding: 0.3rem 0.8rem;
+  font-size: 0.8rem;
+}
+
+.btn-outline:hover {
+  background-color: rgba(247, 240, 230, 0.1);
+}
+
+.btn-small {
+  background-color: #c4552f;
+  color: #f7f0e6;
+  border-radius: 999px;
+  padding: 0.25rem 0.7rem;
+  font-size: 0.8rem;
+  border: 1px solid #a64222;
+}
+
+/* Price / notices */
+.price-line {
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.price {
+  color: #c4552f;
+}
+
+.tiny-text {
+  font-size: 0.75rem;
+  color: #6f6c66;
+  margin-top: 0.4rem;
+}
+
+.tiny-text a {
+  color: #16363b;
+}
+
+/* Feedback text */
+.feedback {
+  margin-top: 0.4rem;
+  font-size: 0.85rem;
+}
+
+/* Screens */
+.screen {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+
+.modal {
+  background-color: #fffaf3;
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+  max-width: 360px;
+  width: 90%;
+  border: 1px solid #e1d5c3;
+}
+
+.modal h3 {
+  margin-top: 0;
+}
+
+/* Utility */
+.highlight {
+  font-weight: 600;
+}
+
+/* Accessibility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Responsive tweaks */
+@media (max-width: 720px) {
+  .bar-inner {
+    flex-wrap: wrap;
+    row-gap: 0.3rem;
+  }
+
+  .top-left {
+    width: 100%;
+    justify-content: flex-start;
+    margin-bottom: 0.2rem;
+  }
+
+  .top-center {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 0.2rem;
+  }
+
+  .top-right {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .chapter-title {
+    font-size: 0.8rem;
+  }
+
+  .main-content {
+    padding: 0.7rem;
+  }
+}
+/* Force modal hidden by default */
+#modalOverlay {
+  display: none;
+}
+#modalOverlay.show {
+  display: flex;
+}
